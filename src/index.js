@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.js'
-import concat from '../../utility/concat.js'
 import keys from './keys.js'
 import hotkey from '@patomation/hotkey'
-
-import Grid from '../Grid'
-import Button from '../Button'
+import { Grid, Button } from '@patomation/react-ui-components'
 
 const Keyboard = ({
   className,
@@ -25,7 +22,7 @@ const Keyboard = ({
 
   return (
     <div
-      className={concat('keyboard', className)}
+      className='keyboard'
       style={{
         ...styles.container,
         ...(background ? { background: background } : null),
