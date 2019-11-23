@@ -1,10 +1,14 @@
 {
   "name": "@patomation/react-keyboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react computer keyboard component",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest"
+    "prepare": "npm run build",
+    "build": "babel src --out-dir lib --ignore \"**/*.test.js\"",
+    "lint": "./node_modules/.bin/eslint .",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,8 +30,26 @@
     "url": "https://github.com/patomation/react-keyboard/issues"
   },
   "homepage": "https://github.com/patomation/react-keyboard#readme",
+  "peerDependencies": {
+    "react": "16.x.x",
+    "react-dom": "16.x.x"
+  },
   "dependencies": {
     "@patomation/hotkey": "^1.3.1",
     "@patomation/react-ui-components": "^1.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-standard": "^4.0.1"
   }
 }
