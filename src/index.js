@@ -115,10 +115,10 @@ Keyboard.propTypes = {
   gap: PropTypes.string,
   onDown: PropTypes.func,
   onUp: PropTypes.func,
-  buttonStyle: PropTypes.func,
-  hoverStyle: PropTypes.string,
-  activeStyle: PropTypes.string,
-  disabledStyle: PropTypes.string
+  buttonStyle: PropTypes.object,
+  hoverStyle: PropTypes.object,
+  activeStyle: PropTypes.object,
+  disabledStyle: PropTypes.object
 }
 
 export default Keyboard
